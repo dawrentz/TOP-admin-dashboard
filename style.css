@@ -148,7 +148,6 @@
             &:hover {
                 outline: solid lightgray 2px;
             }
-
         }
     }
 
@@ -181,7 +180,7 @@
             display: grid; 
             align-content: center;
 
-            #user-names {
+            .user-names {
                 font-size: 1.5rem;
             }
         }
@@ -193,7 +192,6 @@
         align-content: center;
         justify-content: end;
         gap: var(--main-spacing);
-        
 
         button {
             padding: 0.5rem 2rem;
@@ -205,16 +203,14 @@
 
             color: white;
             font-weight: bold;
-
-
         }
     }
 }
 
-
-
-
-
 .main-content {
     background-color: var(--bg-color);
+
+    .icon {
+        filter: invert(0%);
+    }
 }
