@@ -9,7 +9,7 @@
 
 /* for debugging */
 * {
-    /* border-radius: 50%; */
+    /* outline: solid red 1px; */
 }
 
 .icon {
@@ -29,7 +29,6 @@
     border-radius: 50%;
     border: white solid 6px;
     filter: invert(0%)
-
 }
 
 /* profiles */
@@ -60,6 +59,7 @@
     background-color: var(--profile-color);
     border-color: var(--profile-color);
 }
+
 /*==================Styling==================*/
 .container {
     width: 95vw;
@@ -96,8 +96,6 @@
 
         margin-bottom: calc(var(--main-spacing) * 1.25);
         
-
-
         &.sidebar-line-title {
             font-size: 1.75rem;
             gap: 0.66rem;
@@ -130,8 +128,6 @@
     display: grid;
     grid-template-columns: 5fr 3fr;
     gap: calc(var(--main-spacing) * 2);
-    /* justify-items: space-between; */
-    /* align-items: space-between; */
 
     .icon {
         filter: invert(0%);
@@ -330,8 +326,6 @@
             margin: 0 -0.5rem;
         }
 
-
-
         .announcement-link {
 
             &:hover {
@@ -361,7 +355,6 @@
 
             }
         }
-
     }
 
     .trending-card {
@@ -377,15 +370,11 @@
             &:hover {
                 transform: translateY(-5px);
                 cursor: pointer;
-
             }
 
             .user-names {
                 font-weight: bold;
             }
-
         }
-
     }
-
 }
