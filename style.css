@@ -15,11 +15,17 @@
 .icon {
     box-sizing: content-box;
     width: 1.5rem;
+    /* svgs keep scaling with viewport */
+    min-width: 1.5rem;
+    max-width: 1.5rem;
     filter: invert(100%)
 }
 
 .profile-icon {
     width: 2rem;
+    /* svgs keep scaling with viewport */
+    min-width: 2rem;
+    max-width: 2rem;
     border-radius: 50%;
     border: white solid 6px;
     filter: invert(0%)
@@ -98,8 +104,10 @@
             margin-bottom: calc(var(--main-spacing) * 1.5);
     
             .icon {
-                /* svg resizing while using width: */
                 width: 3rem;
+                /* svgs keep scaling with viewport */
+                min-width: 3rem;
+                max-width: 3rem;
             }
         }
 
@@ -180,6 +188,9 @@
 
         .profile-icon {
             width: 4rem;
+            /* svgs keep scaling with viewport */
+            min-width: 4rem;
+            max-width: 4rem;
         }
 
         #header-greeting-message {
@@ -351,13 +362,30 @@
             }
         }
 
+    }
 
+    .trending-card {
+        display: grid;
+        gap: var(--main-spacing);
 
+        .trending-line {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: start;
+            gap: var(--main-spacing);
 
-        
+            &:hover {
+                transform: translateY(-5px);
+                cursor: pointer;
 
+            }
 
+            .user-names {
+                font-weight: bold;
+            }
 
+        }
 
     }
+
 }
