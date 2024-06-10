@@ -5,7 +5,6 @@
     --accent-color: #F0B429;
 
     --main-spacing: 1rem;
-
 }
 
 /* for debugging */
@@ -224,7 +223,6 @@
 }
 
 .main-content {
-
     /* select "card" areas to adding spacing to area title */
     > div > div {
         margin-top: calc(var(--main-spacing) * 0.5);
@@ -233,10 +231,9 @@
     background-color: var(--bg-color);
 
     padding: calc(var(--main-spacing) * 2) calc(var(--main-spacing) * 1.5);
-    ;
 
     display: grid;
-    grid-template: repeat(2, auto) / 3fr 1fr;
+    grid-template: auto 1fr / 3fr 1fr;
     gap: calc(var(--main-spacing) * 1.5);
     align-items: start;
 
@@ -284,13 +281,16 @@
                     }
                 }
 
-                .project-details {
+                .project-details > span {
                 /* form MDN */
                     display: -webkit-box;      /* Use WebKit box layout model */
                     -webkit-box-orient: vertical; /* Vertical box orientation */
-                    -webkit-line-clamp: 5;     /* Show only # lines */
+                    -webkit-line-clamp: 4;     /* Show only # lines */
                     overflow: hidden;          /* Hide the rest of the content */
                     text-overflow: ellipsis;   /* Show ellipsis (...) */
+
+                    line-height: 1.2rem;
+                    color: slategrey;
                 }
 
                 .project-icons {
@@ -305,5 +305,59 @@
                 }
             }
         }
+    }
+
+    .announcement-card {
+        font-size: 0.70rem;
+        line-height: 0.9rem;
+
+        display: grid;
+        gap: var(--main-spacing);
+
+        .spacer {
+            border-bottom: solid lightgray 2px;
+            margin: 0 -0.5rem;
+        }
+
+
+
+        .announcement-link {
+
+            &:hover {
+                background-color: var(--bg-color);
+                outline: var(--bg-color) solid 10px;
+                border-radius: 1px;
+
+                transform: scale(1.02);
+            }
+
+            .announcement-title {
+                font-size: 0.9rem;
+                font-weight: bold;
+    
+                margin-bottom: .15rem;
+            }
+
+            :not(.announcement-title) {
+                /* form MDN */
+                display: -webkit-box;      /* Use WebKit box layout model */
+                -webkit-box-orient: vertical; /* Vertical box orientation */
+                -webkit-line-clamp: 3;     /* Show only # lines */
+                overflow: hidden;          /* Hide the rest of the content */
+                text-overflow: ellipsis;   /* Show ellipsis (...) */
+
+                color: slategrey;
+
+            }
+        }
+
+
+
+
+        
+
+
+
+
     }
 }
